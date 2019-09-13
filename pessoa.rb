@@ -13,7 +13,7 @@ class Pessoa
         @nome = nome
         @sexo = sexo
         @idade = idade
-        @vegetariana = vegetariana 
+        @vegetariana = vegetariana
     end
 
     def verificarConsumo
@@ -21,11 +21,11 @@ class Pessoa
         puts "Sexo = #{@sexo}"
         puts "Idade = #{@idade}"
         puts "Vegetariano(a) = #{@vegetariana}"
-        @vegetariana = nil
-        if(@idade <= 3) or (@vegetariana === true)
+        
+        if(@idade <= 3) or (@vegetariana === "true")
             puts "Não consome carne"
             puts " " 
-        elsif (@idade <=12)
+        elsif (@idade <= 12)
             puts "Consome 1 kilo de carne"
             puts " " 
         else
@@ -35,9 +35,9 @@ class Pessoa
     end 
 end
 
-pessoa = Pessoa.new("Gabrielli", "Feminino", 2, "sim")
-pessoa1 = Pessoa.new("Kaue", "Masculino", 24, "nao")
-pessoa2 = Pessoa.new("Beatriz", "Feminino", 8, "nao")
+pessoa = Pessoa.new("Gabrielli", "Feminino", 23, "true")
+pessoa1 = Pessoa.new("Kaue", "Masculino", 24, "false")
+pessoa2 = Pessoa.new("Beatriz", "Feminino", 8, "false")
 
 pessoa.verificarConsumo
 pessoa1.verificarConsumo
